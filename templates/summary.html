@@ -1,0 +1,226 @@
+<html>
+  <head>
+	<meta charset="utf-8">
+    <title>BioApp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['table']});
+      google.charts.setOnLoadCallback(drawTable1);
+	  google.charts.setOnLoadCallback(drawTable2);
+
+      function drawTable1() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Protein');
+        data.addColumn('number', 'Interactors');
+        data.addRows([
+			['FN1', 1228],
+			['ALB', 746],
+			['F2', 656],
+			['KNG1', 597],
+			['AGT', 512],
+			['C3', 476],
+			['TF', 472],
+			['APOE', 444],
+			['SAA1', 442],
+			['APOB', 441],
+			['PLG', 423],
+			['AMBP', 408],
+			['APOA1', 389],
+			['VWF', 381],
+			['A2M', 380],
+			['CLU', 369],
+			['KRT1', 366],
+			['FGA', 345],
+			['GSN', 331],
+			['C5', 331],
+			['JUP', 328],
+			['TTR', 326],
+			['CALML5', 324],
+			['SPTBN2', 318],
+			['AHSG', 305],
+			['IGF2', 304],
+			['FGB', 303],
+			['KRT5', 295],
+			['FBXO15', 281],
+			['APOA2', 281],
+			['SERPINA1', 277],
+			['VTN', 270],
+			['APOC3', 264],
+			['KRT9', 257],
+			['KRT10', 253],
+			['KRT14', 251],
+			['SERPING1', 250],
+			['HP', 247],
+			['KRT16', 247],
+			['CFD', 242],
+			['CFH', 229],
+			['ITIH4', 211],
+			['FGG', 211],
+			['KRT6A', 207],
+			['HPX', 201],
+			['LYZ', 199],
+			['APOA4', 196],
+			['C4A', 194],
+			['S100A9', 189],
+			['F5', 189],
+			['CFB', 188],
+			['PROS1', 187],
+			['C4B', 187],
+			['DCD', 181],
+			['APOH', 178],
+			['DSP', 177],
+			['SERPINC1', 172],
+			['CST3', 169],
+			['IGFBP3', 161],
+			['CP', 155],
+			['ITIH1', 153],
+			['IGFALS', 146],
+			['SERPINA4', 145],
+			['C1S', 143],
+			['SHBG', 140],
+			['SERPINA3', 134],
+			['C1R', 134],
+			['C2', 133],
+			['SERPINF2', 132],
+			['CPN2', 128],
+			['PON1', 127],
+			['F13A1', 127],
+			['HRG', 126],
+			['A1BG', 124],
+			['GPX3', 119],
+			['ECM1', 117],
+			['HBD', 115],
+			['QSOX1', 110],
+			['ORM2', 109],
+			['APCS', 109],
+			['MASP2', 109],
+			['F10', 107],
+			['FCN2', 107],
+			['C1QA', 103],
+			['CAMP', 102],
+			['CLEC3B', 99],
+			['S100A7', 97],
+			['ANTXR2', 89],
+			['APOD', 88],
+			['LPA', 88],
+			['KRT2', 88],
+			['CFP', 86],
+			['F12', 82],
+			['GC', 80],
+			['SERPIND1', 76],
+			['CPB2', 74],
+			['KRT17', 72],
+			['C1QB', 72],
+			['PLTP', 68],
+			['APOA5', 68],
+			['C4BPA', 67],
+			['KLKB1', 65],
+			['MST1', 64],
+			['C1QC', 62],
+			['SERPINA5', 60],
+			['ITIH2', 58],
+			['F11', 57],
+			['CSTA', 56],
+			['C9', 52],
+			['PCOLCE', 50],
+			['LBP', 48],
+			['HABP2', 48],
+			['C6', 47],
+			['THBS4', 45],
+			['HPR', 43],
+			['CFI', 42],
+			['C8A', 42],
+			['C4BPB', 40],
+			['TGFBI', 39],
+			['C8G', 39],
+			['HRNR', 39],
+			['CFHR1', 38],
+			['AZGP1', 38],
+			['APOL1', 38],
+			['HGFAC', 38],
+			['SBSN', 35],
+			['SERPINF1', 35],
+			['SERPINA10', 33],
+			['CFHR5', 32],
+			['C8B', 32],
+			['CPN1', 30],
+			['C7', 26],
+			['SSC5D', 22],
+			['CD5L', 21],
+			['APOC4', 20],
+			['PZP', 20],
+			['SELENOP', 19],
+			['SAA4', 18],
+			['PRG4', 17],
+			['CFHR2', 14],
+			['RNASE4', 12],
+			['PGLYRP2', 7]        
+        ]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+
+        table.draw(data, {showRowNumber: true, width: '50%', height: '50%' , showRowNumber: true,
+        page: 'enable',
+        pageSize: 15,
+        pagingSymbols: {
+            prev: 'prev',
+            next: 'next'
+        },
+        pagingButtonsConfiguration: 'auto'});
+	
+		}
+		
+		function drawTable2() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Source Database');
+        data.addColumn('number', 'Interactors');
+        data.addRows([
+			['String', 14235],
+			['HPRD', 5264],
+			['BioGRID', 3095],
+			['iRefIndex', 2481]
+	    ]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div2'));
+
+        table.draw(data, {showRowNumber: true, width: '25%', height: '25%'});
+		}
+    </script>
+  </head>
+  <body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="/">BioApp</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<ul class="navbar-nav">
+		  <li class="nav-item">
+			<a class="nav-link" href="/">About<span class="sr-only">(current)</span></a>
+		  </li>	  
+		  <li class="nav-item active">
+			<a class="nav-link" href="/summary">Data Summary</a>
+		  <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Detailed Results
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/breast">Breast Cancer</a>
+          <a class="dropdown-item" href="/colorectal">Colorectal Cancer</a>
+		  <a class="dropdown-item" href="/lung">Lung Cancer</a>
+        </div>
+      </li>
+		  
+		</ul>
+	  </div>
+	</nav>
+	<br>
+	<div id="table_div"></div>
+	<br><br>
+	<div id="table_div2"></div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
